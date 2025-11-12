@@ -7,35 +7,41 @@ export const SONGS: Song[] = [
     artist: 'Podington Bear',
     url: 'https://cdn.pixabay.com/download/audio/2023/11/17/audio_c35f631238.mp3',
     cover: 'https://picsum.photos/seed/music1/500/500',
-    duration: '02:14'
+    duration: '02:14',
+    lyrics: `(Instrumental)`,
+    introDuration: 10,
   },
   {
     title: 'Moment',
     artist: 'Serge Quadrado',
     url: 'https://cdn.pixabay.com/download/audio/2024/01/09/audio_27b875151b.mp3',
     cover: 'https://picsum.photos/seed/music2/500/500',
-    duration: '02:08'
+    duration: '02:08',
+    lyrics: `(Instrumental)`
   },
   {
     title: 'Just Relax',
     artist: 'Lesfm',
     url: 'https://cdn.pixabay.com/download/audio/2022/08/16/audio_472b4353d2.mp3',
     cover: 'https://picsum.photos/seed/music3/500/500',
-    duration: '02:10'
+    duration: '02:10',
+    lyrics: '' // Lyrics will be fetched from API
   },
   {
     title: 'The Beat of Nature',
     artist: 'Olexy',
     url: 'https://cdn.pixabay.com/download/audio/2022/05/23/audio_adf438a2e5.mp3',
     cover: 'https://picsum.photos/seed/music4/500/500',
-    duration: '02:13'
+    duration: '02:13',
+    lyrics: '' // Lyrics will be fetched from API
   },
   {
     title: 'Uplifting',
     artist: 'Corporate',
     url: 'https://cdn.pixabay.com/download/audio/2023/04/18/audio_82c615a153.mp3',
     cover: 'https://picsum.photos/seed/music5/500/500',
-    duration: '02:18'
+    duration: '02:18',
+    lyrics: `(Instrumental)`
   }
 ];
 

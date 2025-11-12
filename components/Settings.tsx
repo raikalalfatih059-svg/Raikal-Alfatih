@@ -8,7 +8,11 @@ interface SettingsProps {
   onResetPlayer: () => void;
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
+  playbackRate: number;
+  onPlaybackRateChange: (rate: number) => void;
 }
+
+const PLAYBACK_SPEEDS = [0.5, 1.0, 1.5, 2.0];
 
 const Settings: React.FC<SettingsProps> = ({
   isVisible,
@@ -17,6 +21,8 @@ const Settings: React.FC<SettingsProps> = ({
   onResetPlayer,
   theme,
   onToggleTheme,
+  playbackRate,
+  onPlaybackRateChange,
 }) => {
   if (!isVisible) return null;
 
@@ -50,6 +56,27 @@ const Settings: React.FC<SettingsProps> = ({
             </div>
         </div>
         
+        {/* Playback Speed Section */}
+        <div className="space-y-3">
+          <h4 className="font-semibold text-gray-600 dark:text-gray-300">Playback Speed</h4>
+          <div className="flex items-center justify-between p-2 bg-light-blue-50 dark:bg-gray-700/50 rounded-lg space-x-1">
+            {PLAYBACK_SPEEDS.map((rate) => (
+              <button
+                key={rate}
+                onClick={() => onPlaybackRateChange(rate)}
+                className={`flex-1 py-2 px-3 text-sm font-bold rounded-md transition-colors duration-200 ${
+                  playbackRate === rate
+                    ? 'bg-light-blue-500 text-white shadow'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-light-blue-100 dark:hover:bg-gray-600'
+                }`}
+                aria-pressed={playbackRate === rate}
+              >
+                {rate.toFixed(1)}x
+              </button>
+            ))}
+          </div>
+        </div>
+
         {/* Actions Section */}
         <div className="space-y-2">
             <h4 className="font-semibold text-gray-600 dark:text-gray-300">Actions</h4>

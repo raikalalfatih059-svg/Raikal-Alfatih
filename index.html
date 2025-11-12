@@ -11,6 +11,15 @@
         darkMode: 'class', // Enable class-based dark mode
         theme: {
           extend: {
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.3s ease-in-out',
+            },
             colors: {
               'light-blue': {
                 '50': '#f0f9ff',

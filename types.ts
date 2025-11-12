@@ -5,4 +5,6 @@ export interface Song {
   url: string;
   cover: string;
   duration: string; // Formatted as "mm:ss"
+  lyrics: string;
+  introDuration?: number; // in seconds
 }
