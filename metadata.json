@@ -1,0 +1,5 @@
+{
+  "name": "Simple MP3 Player",
+  "description": "A web-based MP3 music player with a minimalist UI, built with React and Tailwind CSS. It features playback controls, a progress bar, and repeat/shuffle functionality.",
+  "requestFramePermissions": []
+}
